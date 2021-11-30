@@ -114,17 +114,17 @@ void	Account::displayStatus( void ) const
 
 void	Account::_displayTimestamp( void )
 {
-//	std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
-//	std::time_t time_now = std::chrono::system_clock::to_time_t(now);
-//
-//	tm *utc_tm = localtime(&time_now);
-//	std::cout << std::setfill('0') << "[" << (utc_tm->tm_year + 1900);
-//	std::cout << std::setw(2) << utc_tm->tm_mon;
-//	std::cout << std::setw(2) << utc_tm->tm_mday << "_";
-//	std::cout << std::setw(2) << utc_tm->tm_hour;
-//	std::cout << std::setw(2) << utc_tm->tm_min;
-//	std::cout << std::setw(2) << utc_tm->tm_sec << "] ";
-	std::cout << "[19920104_091532] ";
+	// std::cout << "[19920104_091532] ";
+	std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
+	std::time_t time_now = std::chrono::system_clock::to_time_t(now);
+
+	tm *utc_tm = localtime(&time_now);
+	std::cout << std::setfill('0') << "[" << (utc_tm->tm_year + 1900);
+	std::cout << std::setw(2) << utc_tm->tm_mon;
+	std::cout << std::setw(2) << utc_tm->tm_mday << "_";
+	std::cout << std::setw(2) << utc_tm->tm_hour;
+	std::cout << std::setw(2) << utc_tm->tm_min;
+	std::cout << std::setw(2) << utc_tm->tm_sec << "] ";
 }
 
 Account::Account( void )
