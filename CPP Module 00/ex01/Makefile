@@ -1,7 +1,7 @@
 CC = c++
 NAME = phonebook
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -I. -g
+CFLAGS = -Wall -Wextra -Werror -I.
 
 INCLUDES = Contact.hpp PhoneBook.hpp
 
