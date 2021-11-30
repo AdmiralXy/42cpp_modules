@@ -53,12 +53,12 @@ Account::Account(int initial_deposit)
 
 Account::~Account(void)
 {
+	_nbAccounts--;
+
 	Account::_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
 	std::cout << "amount:" << _amount << ";";
 	std::cout << "closed" << std::endl;
-
-	_nbAccounts--;
 }
 
 void Account::makeDeposit(int deposit)
@@ -75,7 +75,7 @@ void Account::makeDeposit(int deposit)
 	std::cout << "nb_deposits:" << _nbDeposits << std::endl;
 }
 
-bool	Account::makeWithdrawal( int withdrawal )
+bool	Account::makeWithdrawal(int withdrawal)
 {
 	Account::_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -98,12 +98,12 @@ bool	Account::makeWithdrawal( int withdrawal )
 	return (1);
 }
 
-int		Account::checkAmount( void ) const
+int		Account::checkAmount(void) const
 {
 	return (_amount > 0);
 }
 
-void	Account::displayStatus( void ) const
+void	Account::displayStatus(void) const
 {
 	Account::_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -112,7 +112,7 @@ void	Account::displayStatus( void ) const
 	std::cout << "withdrawals:" << _nbWithdrawals << std::endl;
 }
 
-void	Account::_displayTimestamp( void )
+void	Account::_displayTimestamp(void)
 {
 	// std::cout << "[19920104_091532] ";
 	std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
@@ -127,7 +127,7 @@ void	Account::_displayTimestamp( void )
 	std::cout << std::setw(2) << utc_tm->tm_sec << "] ";
 }
 
-Account::Account( void )
+Account::Account(void)
 {
 	_accountIndex = _nbAccounts;
 	_nbAccounts++;
