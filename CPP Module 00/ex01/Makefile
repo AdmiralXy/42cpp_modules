@@ -1,11 +1,11 @@
 CC = c++
-NAME = phonebook
+NAME = main
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -I.
 
 INCLUDES = Contact.hpp PhoneBook.hpp
 
-SRCS = phonebook.cpp \
+SRCS = main.cpp \
 		Contact.cpp \
 		PhoneBook.cpp
 
@@ -33,4 +33,4 @@ re: clean all
 
 tests: $(NAME)
 	@echo "\033[0;34mRunning tests...\033[0m"
-		./phonebook
+		./main
