@@ -24,7 +24,7 @@ void PhoneBook::search()
 	std::cout << "Enter the index of the desired entry: ";
 	std::getline(std::cin, index_input);
 	try {
-		index = std::stoi(index_input);
+		std::istringstream(index_input) >> index;
 	}
 	catch (...) {
 		std::cout << "Index is invalid!" << std::endl;
