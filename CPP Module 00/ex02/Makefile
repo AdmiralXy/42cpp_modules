@@ -1,7 +1,7 @@
-CC = c++
+CC = clang++
 NAME = account
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=c++98 -I.
 
 INCLUDES = Account.hpp
 
