@@ -29,7 +29,9 @@ fclean: clean
 re: clean all
 
 tests: $(NAME)
-	@echo "\033[0;34mRunning tests...\033[0m"
+	@echo "\033[0;32mRunning tests...\033[0m"
 		./megaphone "shhhhh... I think the students are asleep..."
 		./megaphone Damnit " ! " "Sorry students, I thought this thing was off."
 		./megaphone
+	@echo "\033[0;31mTests stopped.\033[0m"
+	@make fclean -s

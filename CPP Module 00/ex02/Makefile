@@ -95,8 +95,10 @@ endef
 export EXAMPLE_LOG
 
 tests: $(NAME)
-	@echo "\033[0;34mRunning tests...\033[0m"
+	@echo "\033[0;32mRunning tests...\033[0m"
 		@./account > our.log
 		@echo "$${EXAMPLE_LOG}" > subject.log
 		diff -y our.log subject.log
 		@rm our.log subject.log
+	@echo "\033[0;31mTests stopped.\033[0m"
+	@make fclean -s
