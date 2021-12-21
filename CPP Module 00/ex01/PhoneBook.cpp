@@ -19,7 +19,7 @@ void PhoneBook::search()
 	std::string index_input;
 	int index;
 
-	for (int i = 0; contacts[i].index != 0 && i < 7; i++)
+	for (int i = 0; contacts[i].index != 0 && i < 8; i++)
 		contacts[i].print(false);
 	std::cout << "Enter the index of the desired entry: ";
 	std::getline(std::cin, index_input);
