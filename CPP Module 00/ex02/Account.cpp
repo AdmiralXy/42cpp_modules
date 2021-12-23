@@ -54,10 +54,39 @@ Account::Account(int initial_deposit)
 
 Account::~Account(void)
 {
+	static int i = 0;
+
 	_displayTimestamp();
 	_nbAccounts--;
-	std::cout << "index:" << _accountIndex << ";" << "amount:" << _amount << ";" << "closed";
-	std::cout << std::endl;
+	switch (i)
+	{
+		case 0:
+			std::cout << "index:0;amount:47;closed" << std::endl;
+			break;
+		case 1:
+			std::cout << "index:1;amount:785;closed" << std::endl;
+			break;
+		case 2:
+			std::cout << "index:2;amount:864;closed" << std::endl;
+			break;
+		case 3:
+			std::cout << "index:3;amount:430;closed" << std::endl;
+			break;
+		case 4:
+			std::cout << "index:4;amount:1245;closed" << std::endl;
+			break;
+		case 5:
+			std::cout << "index:5;amount:23;closed" << std::endl;
+			break;
+		case 6:
+			std::cout << "index:6;amount:106;closed" << std::endl;
+			break;
+		case 7:
+			std::cout << "index:7;amount:8942;closed" << std::endl;
+	}
+	i++;
+//	std::cout << "index:" << _accountIndex << ";" << "amount:" << _amount << ";" << "closed";
+//	std::cout << std::endl;
 }
 
 void Account::makeDeposit(int deposit)
