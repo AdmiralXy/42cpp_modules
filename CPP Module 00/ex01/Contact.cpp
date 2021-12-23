@@ -9,19 +9,20 @@ int Contact::fill(int index)
 {
 	int total_length = 0;
 
+	std::string info[5];
 	std::cout << "First name: ";
-	std::getline(std::cin, information[0]);
+	std::getline(std::cin, info[0]);
 	std::cout << "Last name: ";
-	std::getline(std::cin, information[1]);
+	std::getline(std::cin, info[1]);
 	std::cout << "Nickname: ";
-	std::getline(std::cin, information[2]);
+	std::getline(std::cin, info[2]);
 	std::cout << "Phone number: ";
-	std::getline(std::cin, information[3]);
+	std::getline(std::cin, info[3]);
 	std::cout << "Darkest secret: ";
-	std::getline(std::cin, information[4]);
+	std::getline(std::cin, info[4]);
 
 	for (int i = 0; i < 5; i++)
-		total_length += information[i].length();
+		total_length += info[i].length();
 
 	if (total_length == 0)
 	{
@@ -31,6 +32,8 @@ int Contact::fill(int index)
 	else
 	{
 		this->index = index;
+		for (int i = 0; i < 5; i++)
+			information[i] = info[i];
 		std::cout << "Contact successfully added!" << std::endl;
 	}
 	return (1);
