@@ -8,7 +8,7 @@ int find_replace(char *argv[])
 
 	if (input.fail())
 	{
-		std::cout << filename << " file doesn't exists!" << std::endl;
+		std::cout << filename << ": file read error!" << std::endl;
 		return (1);
 	}
 
