@@ -1,4 +1,4 @@
-CC = clang++
+CC = c++
 NAME = account
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=c++98 -I.

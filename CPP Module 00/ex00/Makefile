@@ -1,4 +1,4 @@
-CC = clang++
+CC = c++
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=c++98 -I.
 
