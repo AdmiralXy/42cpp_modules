@@ -14,7 +14,7 @@ Fixed::Fixed(const int value)
 
 Fixed::Fixed(const float value)
 {
-	this->value = roundf(value * pow(2, fractional_bits));
+	this->value = roundf(value * (1 << fractional_bits));
 }
 
 Fixed::~Fixed()
@@ -149,7 +149,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat(void) const
 {
-	return value / pow(2, fractional_bits);
+	return value / (1 << fractional_bits);
 }
 
 int Fixed::toInt(void) const
