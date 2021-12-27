@@ -70,7 +70,7 @@ Fixed Fixed::operator+(const Fixed &fixed)
 
 Fixed Fixed::operator-(const Fixed &fixed)
 {
-	return Fixed(this->toFloat() + fixed.toFloat());
+	return Fixed(this->toFloat() - fixed.toFloat());
 }
 
 Fixed Fixed::operator*(const Fixed &fixed)
