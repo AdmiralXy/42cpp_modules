@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=c++98 -I.
 
 NAME = main
 
-SRCS = main.cpp ClapTrap.cpp FragTrap.cpp
+SRCS = main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp
 
 OBJS = $(SRCS:%.cpp=%.o)
 
