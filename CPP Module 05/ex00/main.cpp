@@ -3,13 +3,13 @@
 int	main(void)
 {
 	{
-		Bureaucrat bureaucrat("Oleg", 25);
+		Bureaucrat bureaucrat("Vladimir", 25);
 		std::cout << "name: " << bureaucrat.getName() << std::endl;
 		std::cout << "grade: " << bureaucrat.getGrade() << std::endl;
 		bureaucrat.incrementGrade();
-		std::cout << "incrementGrade: " << bureaucrat << std::endl;
+		std::cout << "incrementGrade() -> " << bureaucrat << std::endl;
 		bureaucrat.decrementGrade();
-		std::cout << "decrementGrade: " << bureaucrat << std::endl;
+		std::cout << "decrementGrade() -> " << bureaucrat << std::endl;
 	}
 	{
 		try
