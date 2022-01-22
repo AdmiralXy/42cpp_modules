@@ -18,11 +18,14 @@ int main( void )
 		Fixed B(5.3f);
 		Fixed C = A + 5;
 		Fixed D = C;
-		std::cout << "Operators test: " << std::endl;
+		std::cout << "Min/max test: " << std::endl;
 		std::cout << "A = " << A << std::endl;
 		std::cout << "B = " << B << std::endl;
 		std::cout << "C = " << C << std::endl;
 		std::cout << "D = " << D << std::endl;
+		std::cout << "min(A, B) " << Fixed::min(A, B) << std::endl;
+		std::cout << "max(A, B) " << Fixed::max(A, B) << std::endl;
+		std::cout << "Operators test: " << std::endl;
 		std::cout << "A > B: " << (A > B) << std::endl;
 		std::cout << "A < B: " << (A < B) << std::endl;
 		std::cout << "A >= B: " << (A >= B) << std::endl;
