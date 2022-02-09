@@ -33,7 +33,6 @@ Character::~Character()
 
 Character &Character::operator=(const Character &character)
 {
-	std::cout << "Vizov?" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (inventory[i])
@@ -61,19 +60,14 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	int i;
-
-	i = idx;
-	while (i < 4 && this->inventory[i])
-	{
-		this->inventory[i - 1] = this->inventory[i];
-		i++;
-	}
-	this->inventory[i] = NULL;
+	if (idx > -1 && idx < 5)
+		this->inventory[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter& target)
 {
 	if (idx > -1 && idx < 5 && inventory[idx])
 		inventory[idx]->use(target);
+	else
+		std::cout << "* nothing happens *" << std::endl;
 }
