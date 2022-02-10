@@ -25,9 +25,11 @@ int	main(void)
 	{
 		std::cout << "------- signForm() ----------" << std::endl;
 		Bureaucrat Andrew("Andrew", 55);
+		Bureaucrat Antony("Antony", 5);
 		Form B1("B1", 50, 10);
 		std::cout << B1 << std::endl;
 		Andrew.signForm(B1);
+		Antony.signForm(B1);
 		std::cout << B1 << std::endl;
 	}
 	{

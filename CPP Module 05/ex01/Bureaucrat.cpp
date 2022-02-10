@@ -65,12 +65,12 @@ std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat)
 
 void Bureaucrat::signForm(Form &form)
 {
-	if (grade <= form.getGradeToSign())
+	try
 	{
-		std::cout << name << " signed " << "form " << form.getName() << std::endl;
 		form.beSigned(*this);
+		std::cout << name << " signed " << "form " << form.getName() << std::endl;
 	}
-	else
+	catch (std::exception &e)
 	{
 		std::cout << name << " couldn't sign " << "form " << form.getName() << " because his grade is too low!" << std::endl;
 	}
