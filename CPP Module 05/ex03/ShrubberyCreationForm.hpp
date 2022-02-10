@@ -2,6 +2,7 @@
 #define INC_42CPP_MODULES_SHRUBBERYCREATIONFORM_H
 
 #include "Form.hpp"
+#include <fstream>
 
 class ShrubberyCreationForm : public Form
 {

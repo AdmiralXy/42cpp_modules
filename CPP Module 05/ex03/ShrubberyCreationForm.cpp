@@ -31,5 +31,37 @@ std::string ShrubberyCreationForm::getTarget() const
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	if (isAbleToExecute(executor))
-		std::cout << target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
+	{
+		std::string filename = target + "_shrubbery";
+		std::ofstream output(filename.c_str());
+		output << "                                                      .\n"
+				  "                                              .         ;  \n"
+				  "                 .              .              ;%     ;;   \n"
+				  "                   ,           ,                :;%  %;   \n"
+				  "                    :         ;                   :;%;'     .,   \n"
+				  "           ,.        %;     %;            ;        %;'    ,;\n"
+				  "             ;       ;%;  %%;        ,     %;    ;%;    ,%'\n"
+				  "              %;       %;%;      ,  ;       %;  ;%;   ,%;' \n"
+				  "               ;%;      %;        ;%;        % ;%;  ,%;'\n"
+				  "                `%;.     ;%;     %;'         `;%%;.%;'\n"
+				  "                 `:;%.    ;%%. %@;        %; ;@%;%'\n"
+				  "                    `:%;.  :;bd%;          %;@%;'\n"
+				  "                      `@%:.  :;%.         ;@@%;'   \n"
+				  "                        `@%.  `;@%.      ;@@%;         \n"
+				  "                          `@%%. `@%%    ;@@%;        \n"
+				  "                            ;@%. :@%%  %@@%;       \n"
+				  "                              %@bd%%%bd%%:;     \n"
+				  "                                #@%%%%%:;;\n"
+				  "                                %@@%%%::;\n"
+				  "                                %@@@%(o);  . '         \n"
+				  "                                %@@@o%;:(.,'         \n"
+				  "                            `.. %@@@o%::;         \n"
+				  "                               `)@@@o%::;         \n"
+				  "                                %@@(o)::;        \n"
+				  "                               .%@@@@%::;         \n"
+				  "                               ;%@@@@%::;.          \n"
+				  "                              ;%@@@@%%:;;;. \n"
+				  "                          ...;%@@@@@%%:;;;;,..        ";
+		output.close();
+	}
 }
