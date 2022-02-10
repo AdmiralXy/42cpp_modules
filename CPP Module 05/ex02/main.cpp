@@ -16,5 +16,8 @@ int	main(void)
 	andrew.executeForm(*f1);
 	andrew.executeForm(*f2);
 	andrew.executeForm(*f3);
+	delete f1;
+	delete f2;
+	delete f3;
 	return 0;
 }

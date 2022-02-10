@@ -18,7 +18,7 @@ private:
 public:
 	Form(std::string name, int grade_to_sign, int grade_to_execute);
 	Form(const Form &form);
-	~Form();
+	virtual ~Form();
 	Form &operator=(const Form &form);
 	std::string getName() const;
 	bool getIsSigned() const;
